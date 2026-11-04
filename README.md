@@ -10,7 +10,7 @@ A CrossPoint plugin that keeps notes on your Xteink X3/X4 as plain `.txt` files 
 
 Install **Sleep Notes** from Plugin Hub, or copy the `sleep-notes.crosspoint-plugin` folder to the SD card as `/plugins/sleep-notes/`, then enable **Settings → Connectivity → Plugins**. Requires CrossPoint 2.0 or later.
 
-## iPhone Shortcut: "Send to X3"
+## iPhone Shortcut: "Send Sleep Note"
 
 1. **Shortcut settings:** turn on *Show in Share Sheet*. Receive **Text** and **Rich Text**. If there's no input, choose **Ask For Text**.
 2. **Format Date:** Current Date, custom format `yyyy-MM-dd HHmm`.
@@ -33,11 +33,7 @@ Open `http://crosspoint.local/files#note=<URL-encoded note>` and the Notes card 
 
 Shortcut for this: **Get Text from Input** → **URL Encode** (Encode) → **Open URLs** `http://crosspoint.local/files#note=[URL Encoded Text]`.
 
-## Publishing to Plugin Hub
+iCloud Link to Shortcut:
 
-1. Public GitHub repo (this one: `adi03/Sleep-Notes`), with this README at the root and the `sleep-notes.crosspoint-plugin/` folder beside it.
-2. Add the repository topic `crosspoint-plugin`.
-3. Publish a stable (non-draft, non-prerelease) GitHub Release whose tag matches `version` in `manifest.json`, e.g. `v0.5.1`.
-4. Plugin Hub picks it up on its next refresh (every three hours).
+https://www.icloud.com/shortcuts/8f597c245bcf4871993a44c5b4aca441
 
-For each update: bump `version` in `manifest.json`, then publish a new Release with the matching tag. Never reuse or move an existing tag.
