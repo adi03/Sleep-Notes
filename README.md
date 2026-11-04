@@ -1,6 +1,6 @@
 # To Do List for CrossPoint
 
-Send a to-do list from your iPhone to your Xteink X3 or X4 and see it every time the reader sleeps.
+Send a to-do list from your phone or computer to your Xteink X3 or X4 and see it every time the reader sleeps.
 
 <p align="center">
   <img src="docs/grocery-list-sleep-screen.jpg" alt="An Xteink X3 showing a grocery list as its sleep screen" width="320">
@@ -10,7 +10,7 @@ To Do List is a plugin for CrossPoint 2.0. It adds a **To Do List** card to the 
 
 - **Saves each list** as a plain `.txt` file in `/Notes`, so you can also open it from the Library like a book. Right-to-left text such as Arabic works too.
 - **Turns the list into your sleep screen.** When you press **Save to reader**, the card draws the list as `/sleep/note.bmp`.
-- **Fills itself in from your iPhone.** The Apple Shortcut below opens the card with your list already typed in, so all you do is press **Save to reader**.
+- **Works from any browser.** Type a list on the card from a phone, tablet or computer, or open it from a link with the list already filled in. On iPhone, the Apple Shortcut below does that for you.
 
 ## Install
 
@@ -41,17 +41,27 @@ Open the link on your iPhone and tap **Add Shortcut**.
 - **If `crosspoint.local` doesn't load,** edit the shortcut and replace `crosspoint.local` with the IP address shown on the reader's File Transfer screen.
 - **Only the list is shown.** Saving deletes any other `.bmp` files in `/sleep`, along with CrossPoint's cached sleep images, so your list is the only sleep image. Move pictures you want to keep out of `/sleep` first.
 
-### Build your own
+## Other devices
 
-The shortcut opens the card with a link like this:
+On Android, a tablet or a computer:
+
+1. Put the reader in **File Transfer** on the same WiFi.
+2. Open `http://crosspoint.local/files` in a browser.
+3. Type your list on the To Do List card and press **Save to reader**.
+
+To skip the typing, have an automation app or script open a link in the format below.
+
+### Link format
+
+The card fills itself in from a link like this:
 
 ```
 http://crosspoint.local/files#title=<URL-encoded title>&body=<URL-encoded list>
 ```
 
-A minimal version has three actions: **Get Text from Input** → **URL Encode** → **Open URLs** `http://crosspoint.local/files#note=[URL Encoded Text]`. With `#note=`, the first line becomes the title.
+To build your own Apple Shortcut, a minimal version has three actions: **Get Text from Input** → **URL Encode** → **Open URLs** `http://crosspoint.local/files#note=[URL Encoded Text]`. With `#note=`, the first line becomes the title.
 
-The part after `#` stays in Safari and is never sent to the reader in the address, so long lists, `&`, `+` and emoji are fine. Nothing is uploaded until you press **Save to reader**.
+The part after `#` stays in the browser and is never sent to the reader in the address, so long lists, `&`, `+` and emoji are fine. Nothing is uploaded until you press **Save to reader**.
 
 ## How it works
 
