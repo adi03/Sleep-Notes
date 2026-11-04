@@ -1,4 +1,4 @@
-// Notes for CrossPoint — File Manager plugin.
+// To Do List for CrossPoint — File Manager plugin.
 // Notes are plain .txt files in /Notes, so the reader opens them with its
 // built-in TXT reader (RTL text such as Arabic included).
 //
@@ -55,7 +55,7 @@ CrossPoint.registerPlugin((container, api) => {
       .cpn canvas { display: block; width: 132px; border: 1px solid #999; margin-top: .5rem; }
     </style>
     <div class="cpn">
-      <h2>Notes</h2>
+      <h2>To Do List</h2>
       <p class="muted">Notes are saved as text files in ${DIR}. Open them on the reader from the Library.</p>
       <input type="text" id="cpn-title" placeholder="Title (optional)" maxlength="60">
       <textarea id="cpn-body" placeholder="Write a note…" dir="auto"></textarea>

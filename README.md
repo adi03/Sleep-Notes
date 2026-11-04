@@ -1,4 +1,4 @@
-# Sleep Notes for CrossPoint
+# To Do List for CrossPoint
 
 A CrossPoint plugin that keeps notes on your Xteink X3/X4 as plain `.txt` files in `/Notes`, so the built-in TXT reader opens them (right-to-left text included).
 
@@ -8,7 +8,7 @@ A CrossPoint plugin that keeps notes on your Xteink X3/X4 as plain `.txt` files 
 
 ## Install
 
-Install **Sleep Notes** from Plugin Hub, or copy the `sleep-notes.crosspoint-plugin` folder to the SD card as `/plugins/sleep-notes/`, then enable **Settings → Connectivity → Plugins**. Requires CrossPoint 2.0 or later.
+Install **To Do List** from Plugin Hub, or copy the `to-do-list.crosspoint-plugin` folder to the SD card as `/plugins/to-do-list/`, then enable **Settings → Connectivity → Plugins**. Requires CrossPoint 2.0 or later.
 
 ## iPhone Shortcut: "Send Sleep Note"
 
@@ -29,7 +29,7 @@ On the first run, allow Shortcuts to access devices on your local network. The r
 
 ## Prefill the card from a link
 
-Open `http://crosspoint.local/files#note=<URL-encoded note>` and the Notes card fills itself in (first line as the title), ready for **Save to reader**. `#title=…&body=…` also works. The part after `#` stays in the browser, so long notes are fine.
+Open `http://crosspoint.local/files#note=<URL-encoded note>` and the To Do List card fills itself in (first line as the title), ready for **Save to reader**. `#title=…&body=…` also works. The part after `#` stays in the browser, so long notes are fine.
 
 Shortcut for this: **Get Text from Input** → **URL Encode** (Encode) → **Open URLs** `http://crosspoint.local/files#note=[URL Encoded Text]`.
 

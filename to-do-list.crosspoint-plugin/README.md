@@ -1,4 +1,4 @@
-SLEEP NOTES FOR CROSSPOINT
+TO DO LIST FOR CROSSPOINT
 
 Your notes are plain text files in the Notes folder.
 Open them from the Library like any book.
@@ -20,7 +20,7 @@ NOTE AS SLEEP SCREEN
    "sleep") are deleted too.
 
 WRITE A NOTE FROM A BROWSER
-The same Notes card lets you write, save, delete notes,
+The same To Do List card lets you write, save, delete notes,
 and turn any note into the wallpaper.
 
 If crosspoint.local does not load, use the IP address

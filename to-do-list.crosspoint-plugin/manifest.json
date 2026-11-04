@@ -1,0 +1,12 @@
+{
+  "name": "to-do-list",
+  "title": "To Do List",
+  "description": "Send to-dos from your iPhone to the reader as text files in /Notes; each saved item can become your sleep screen.",
+  "version": "0.6.0",
+  "mount": "files",
+  "files": [
+    "manifest.json",
+    "plugin.js",
+    "README.md"
+  ]
+}
