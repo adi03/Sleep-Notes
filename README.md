@@ -10,7 +10,7 @@ To Do List is a plugin for CrossPoint 2.0. It adds a **To Do List** card to the 
 
 - **Saves each list** as a plain `.txt` file in `/Notes`, so you can also open it from the Library like a book. Right-to-left text such as Arabic works too.
 - **Turns the list into your sleep screen.** When you press **Save to reader**, the card draws the list as `/sleep/note.bmp`.
-- **Works from any browser.** Type a list on the card from a phone, tablet or computer, or open it from a link with the list already filled in. On iPhone, the Apple Shortcut below does that for you.
+- **Works from any browser.** Type a list on the card from a phone, tablet or computer, or open it from a link with the list already filled in. On iPhone and Android, the shortcuts below do that for you.
 
 ## Install
 
@@ -41,9 +41,29 @@ Open the link on your iPhone and tap **Add Shortcut**.
 - **If `crosspoint.local` doesn't load,** edit the shortcut and replace `crosspoint.local` with the IP address shown on the reader's File Transfer screen.
 - **Only the list is shown.** Saving deletes any other `.bmp` files in `/sleep`, along with CrossPoint's cached sleep images, so your list is the only sleep image. Move pictures you want to keep out of `/sleep` first.
 
+## Android Shortcut: "Send Sleep Note"
+
+Android has no built-in Shortcuts app, so this uses the free, open-source [HTTP Shortcuts](https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts) app ([also on F-Droid](https://f-droid.org/packages/ch.rmy.android.http_shortcuts/)).
+
+1. Install **HTTP Shortcuts**.
+2. On your phone, open **[Import "Send Sleep Note"](https://http-shortcuts.rmy.ch/import?url=https%3A%2F%2Fraw.githubusercontent.com%2Fadi03%2FSleep-Notes%2Fmain%2Fandroid%2Fsend-sleep-note.json)** and confirm the import. The link only works on a phone with the app installed. You can also go to **⋮ → Import/Export → Import from URL** and paste `https://raw.githubusercontent.com/adi03/Sleep-Notes/main/android/send-sleep-note.json`.
+
+### Using it
+
+1. On the reader, open **File Transfer** and join your home WiFi.
+2. In Google Keep or any notes app, tap **Share → Send Sleep Note**.
+3. Your browser opens the To Do List card with your list filled in. Press **Save to reader**.
+
+You can also tap **Send Sleep Note** in the app, or add it to your home screen. It then asks for a title and your list.
+
+### Tips
+
+- **If `crosspoint.local` doesn't open:** many Android phones can't find `.local` addresses. In HTTP Shortcuts, go to **⋮ → Variables → readerAddress** and change it to the IP address shown on the reader's File Transfer screen, for example `192.168.1.42`. Then give the reader a fixed IP address in your router settings, so it doesn't change.
+- **The title:** when the app you share from sends a title, as Google Keep does, it becomes the list's title. Otherwise the first line of the text is used.
+
 ## Other devices
 
-On Android, a tablet or a computer:
+On a tablet or a computer:
 
 1. Put the reader in **File Transfer** on the same WiFi.
 2. Open `http://crosspoint.local/files` in a browser.

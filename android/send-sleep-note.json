@@ -1,0 +1,46 @@
+{
+  "version": 92,
+  "compatibilityVersion": 90,
+  "categories": [
+    {
+      "id": "5b1f4c0e-8a52-4f1e-9c37-2d6a1e7b9a01",
+      "name": "To Do List",
+      "layoutType": "linear_list",
+      "shortcuts": [
+        {
+          "id": "9d2e6f3a-41c7-4b8e-a5d0-7c3f2b1e8d42",
+          "executionType": "scripting",
+          "name": "Send Sleep Note",
+          "description": "Send a list to the To Do List card on your CrossPoint reader",
+          "iconName": "flat_color_clipboard",
+          "launcherShortcut": true,
+          "codeOnPrepare": "// To Do List for CrossPoint: opens the To Do List card on your reader\n// with the shared text filled in. Then press \"Save to reader\".\nconst address = (getVariable('readerAddress') || '').trim() || 'crosspoint.local';\nlet title = (getVariable('noteTitle') || '').trim();\nlet text = (getVariable('noteText') || '').replace(/\\r/g, '').trim();\n\n// Some apps repeat the title as the first line of the text.\nif (title && text.split('\\n')[0].trim() === title) {\n  text = text.split('\\n').slice(1).join('\\n').trim();\n}\n\nif (!title && !text) {\n  showToast('Nothing to send');\n} else {\n  const host = address.replace(/^https?:\\/\\//, '').replace(/\\/+$/, '');\n  const base = 'http://' + host + '/files';\n  const url = title\n    ? base + '#title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(text)\n    : base + '#note=' + encodeURIComponent(text);\n  openUrl(url);\n}\n"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "1f0a7c52-3e4b-4d6a-8b9c-0a1b2c3d4e01",
+      "key": "readerAddress",
+      "type": "constant",
+      "value": "crosspoint.local"
+    },
+    {
+      "id": "1f0a7c52-3e4b-4d6a-8b9c-0a1b2c3d4e02",
+      "key": "noteTitle",
+      "type": "text",
+      "title": "Title",
+      "message": "Leave empty to use the first line of the list",
+      "isShareTitle": true
+    },
+    {
+      "id": "1f0a7c52-3e4b-4d6a-8b9c-0a1b2c3d4e03",
+      "key": "noteText",
+      "type": "text",
+      "title": "Your list",
+      "isShareText": true,
+      "isMultiline": true
+    }
+  ]
+}
